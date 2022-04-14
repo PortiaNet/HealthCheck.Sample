@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="PortiaNet.HealthCheck.Reporter" Version="1.0.2" />
+    <PackageReference Include="PortiaNet.HealthCheck.Writer.HTTP" Version="1.0.0" />
+    <PackageReference Include="PortiaNet.HealthCheck.Writer.MongoDB" Version="1.0.1" />
+    <PackageReference Include="PortiaNet.HealthCheck.Writer.SQLServer" Version="1.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
 </Project>
