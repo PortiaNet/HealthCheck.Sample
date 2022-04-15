@@ -105,5 +105,15 @@ namespace PortiaNet.HealthCheck.Sample.API.Controllers
             return Ok();
         }
         #endregion Username and Password Authentication
+
+        #region Bulk Data Dumping
+        [HttpPost]
+        [HealthCheckIgnore]
+        public IActionResult SaveBulkReport([FromBody] List<RequestDetail> report)
+        {
+            Debugger.Log(0, null, JsonSerializer.Serialize(report));
+            return Ok();
+        }
+        #endregion Bulk Data Dumping
     }
 }

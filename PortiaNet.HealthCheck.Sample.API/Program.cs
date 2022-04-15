@@ -74,6 +74,16 @@ builder.Services.AddHTTPWriter(options =>
     };
 });
 
+builder.Services.AddHTTPWriter(options =>
+{
+    options.ListenerAddress = new Uri("https://localhost:7149/ReportWriterEmulator/SaveBulkReport");
+    options.MuteOnError = false;
+    options.AuthenticationType = AuthenticationType.None;
+    options.NodeName = "Main Node Bulk Reprot";
+    options.BulkDataDumpingEnabled = true;
+    options.DataDumpingSize = 5;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
